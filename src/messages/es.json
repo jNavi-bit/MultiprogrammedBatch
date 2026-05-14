@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Multiprogramación por lotes",
+    "description": "Simulador de procesamiento por lotes con multiprogramación e interrupciones."
+  },
+  "nav": {
+    "brand": "SO · Lotes",
+    "headerTitle": "Lotes con multiprogramación",
+    "tagline": "Simulador de lotes con multiprogramación, colas y atajos de teclado (E, W, P, C).",
+    "clockHint": "Avanza un tick por intervalo mientras corre la simulación.",
+    "sectionControls": "Controles",
+    "sectionControlsHint": "Pausa, continuar o reiniciar la corrida.",
+    "sectionTiming": "Intervalo de tick",
+    "sectionRun": "Nueva corrida",
+    "runMenuHint": "Define cuántos trabajos se generan (lotes de hasta 4) y pulsa iniciar.",
+    "stepDecrease": "Disminuir valor",
+    "stepIncrease": "Aumentar valor"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "locale": {
+    "label": "Idioma",
+    "name_es": "Español",
+    "name_en": "English",
+    "name_de": "Deutsch"
+  },
+  "setup": {
+    "title": "Configuración inicial",
+    "description": "Indica cuántos trabajos se generarán. Se formarán lotes de hasta 4 procesos. Los datos de cada trabajo (ID, TME, operación) se generan automáticamente.",
+    "jobsLabel": "Número de trabajos",
+    "start": "Iniciar simulación",
+    "hint": "Rango recomendado: 4–40 para ver varios lotes.",
+    "batchChip": "Máx. 4 por lote",
+    "batchesPreview": "lotes"
+  },
+  "dashboard": {
+    "batchProgress": "Avance de lotes",
+    "tickHint": "Ticks más cortos aceleran la simulación. También puedes escribir el valor en milisegundos.",
+    "clockHint": "Avanza un paso en cada tick mientras la simulación corre.",
+    "tooltipPause": "Pausa el temporizador y la CPU (tecla P).",
+    "tooltipResume": "Reanuda la simulación (tecla C).",
+    "tooltipReset": "Volver a la pantalla de configuración.",
+    "pendingBatches": "Lotes pendientes",
+    "waitingTitle": "Procesos en espera (lote actual)",
+    "runningTitle": "Proceso en ejecución",
+    "finishedTitle": "Trabajos terminados",
+    "globalClock": "Reloj global",
+    "batchLabel": "Lote en ejecución",
+    "emptyRunning": "Sin proceso en CPU",
+    "tickLabel": "Velocidad de tick (ms)",
+    "reset": "Reiniciar",
+    "resume": "Continuar",
+    "pause": "Pausa",
+    "statusPaused": "Simulación en pausa",
+    "statusRunning": "En ejecución",
+    "statusCompleted": "Simulación finalizada",
+    "back": "Volver a configuración",
+    "completedTitle": "Simulación completada",
+    "completedBody": "Todos los lotes terminaron. Puedes volver a la configuración para generar una nueva corrida."
+  },
+  "columns": {
+    "batchesAndQueue": "Lotes y cola de listos",
+    "running": "Proceso en CPU",
+    "finished": "Terminados",
+    "batchDone": "Lote {n} · completado",
+    "batchPending": "Lote {n} · pendiente",
+    "batchActive": "Lote {n} · en curso (cola)",
+    "queueEmpty": "Nadie en cola: el CPU está sirviendo al primero del lote o la cola está vacía.",
+    "queueCpuOnly": "Sin procesos en cola: el único listo del lote está en la columna CPU."
+  },
+  "empty": {
+    "beforeStart": "En la barra superior: menú «Iniciar simulación», número de trabajos y botón. Aquí verás lotes y cola.",
+    "cpuIdle": "Cuando un proceso ocupe la CPU, verás aquí su ficha completa con barra de progreso.",
+    "noFinished": "Los trabajos terminados (correctos o con error) aparecerán aquí con su resultado.",
+    "noBatches": "Aún no hay lotes generados."
+  },
+  "process": {
+    "batch": "Lote",
+    "id": "ID",
+    "operation": "Operación",
+    "operationAndResult": "Operación y resultado",
+    "kind": "Tipo",
+    "tme": "TME",
+    "elapsed": "Ejec.",
+    "remaining": "Rest.",
+    "cpuProgress": "Progreso en CPU",
+    "resultPending": "?",
+    "statusPendingBatch": "Pendiente de lote",
+    "statusQueued": "En cola",
+    "statusRunning": "En CPU",
+    "statusFinished": "Terminado",
+    "statusError": "Error"
+  },
+  "table": {
+    "id": "ID",
+    "tme": "TME",
+    "elapsed": "Tiempo transcurrido",
+    "remaining": "Restante",
+    "operation": "Operación",
+    "result": "Resultado"
+  },
+  "keys": {
+    "title": "Atajos",
+    "e": "Interrupción E/S: el proceso en CPU pasa al final de la cola del lote.",
+    "w": "Error: termina el proceso actual y se marca ERROR en resultados.",
+    "p": "Pausa la simulación.",
+    "c": "Continúa la simulación pausada.",
+    "focusHint": "Los atajos funcionan con el foco en la página.",
+    "eShort": "E/S a cola",
+    "wShort": "error",
+    "pShort": "pausa",
+    "cShort": "continuar"
+  },
+  "finished": {
+    "error": "ERROR"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La ruta solicitada no existe en esta aplicación.",
+    "back": "Ir al inicio"
+  }
+}

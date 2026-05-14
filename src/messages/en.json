@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Multiprogrammed batch processing",
+    "description": "Batch processing simulator with multiprogramming and interrupts."
+  },
+  "nav": {
+    "brand": "OS · Batches",
+    "headerTitle": "Batches with multiprogramming",
+    "tagline": "Batch simulator with multiprogramming, queues, and keyboard shortcuts (E, W, P, C).",
+    "clockHint": "Increases one step per tick while the simulation runs.",
+    "sectionControls": "Controls",
+    "sectionControlsHint": "Pause, resume, or reset the run.",
+    "sectionTiming": "Tick interval",
+    "sectionRun": "New run",
+    "runMenuHint": "Set how many jobs to generate (batches of up to 4), then start.",
+    "stepDecrease": "Decrease value",
+    "stepIncrease": "Increase value"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "label": "Language",
+    "name_es": "Español",
+    "name_en": "English",
+    "name_de": "Deutsch"
+  },
+  "setup": {
+    "title": "Initial setup",
+    "description": "Enter how many jobs to generate. Jobs are grouped into batches of up to 4. Each job’s ID, estimated time, and operation are generated automatically.",
+    "jobsLabel": "Number of jobs",
+    "start": "Start simulation",
+    "hint": "Try 4–40 jobs to see multiple batches.",
+    "batchChip": "Up to 4 per batch",
+    "batchesPreview": "batches"
+  },
+  "dashboard": {
+    "batchProgress": "Batch progress",
+    "tickHint": "Lower tick values run faster. You can also type the interval in milliseconds.",
+    "clockHint": "Increases by one on each tick while the simulation is running.",
+    "tooltipPause": "Pause the timer and CPU ticks (P).",
+    "tooltipResume": "Resume the simulation (C).",
+    "tooltipReset": "Return to the setup screen.",
+    "pendingBatches": "Pending batches",
+    "waitingTitle": "Waiting processes (current batch)",
+    "runningTitle": "Running process",
+    "finishedTitle": "Finished jobs",
+    "globalClock": "Global clock",
+    "batchLabel": "Active batch",
+    "emptyRunning": "No process on CPU",
+    "tickLabel": "Tick speed (ms)",
+    "reset": "Reset",
+    "resume": "Resume",
+    "pause": "Pause",
+    "statusPaused": "Simulation paused",
+    "statusRunning": "Running",
+    "statusCompleted": "Simulation completed",
+    "back": "Back to setup",
+    "completedTitle": "All batches finished",
+    "completedBody": "You can return to setup to run another simulation."
+  },
+  "columns": {
+    "batchesAndQueue": "Batches & ready queue",
+    "running": "CPU process",
+    "finished": "Finished",
+    "batchDone": "Batch {n} · completed",
+    "batchPending": "Batch {n} · pending",
+    "batchActive": "Batch {n} · active (queue)",
+    "queueEmpty": "Queue empty: CPU is on the first job of the batch or the queue is empty.",
+    "queueCpuOnly": "No queued jobs: the only ready job of this batch is on the CPU column."
+  },
+  "empty": {
+    "beforeStart": "Top bar: play menu → job count → Start. Batches and the ready queue appear here.",
+    "cpuIdle": "When a process holds the CPU, its full card and progress bar appear here.",
+    "noFinished": "Completed jobs (success or error) land here with their results.",
+    "noBatches": "No batches generated yet."
+  },
+  "process": {
+    "batch": "Batch",
+    "id": "ID",
+    "operation": "Operation",
+    "operationAndResult": "Operation & result",
+    "kind": "Kind",
+    "tme": "TME",
+    "elapsed": "CPU",
+    "remaining": "Left",
+    "cpuProgress": "CPU progress",
+    "resultPending": "?",
+    "statusPendingBatch": "Waiting for batch",
+    "statusQueued": "Queued",
+    "statusRunning": "On CPU",
+    "statusFinished": "Done",
+    "statusError": "Error"
+  },
+  "table": {
+    "id": "ID",
+    "tme": "ET",
+    "elapsed": "Elapsed",
+    "remaining": "Remaining",
+    "operation": "Operation",
+    "result": "Result"
+  },
+  "keys": {
+    "title": "Shortcuts",
+    "e": "I/O interrupt: running process moves to the end of the batch queue.",
+    "w": "Error: terminates the current process with ERROR in results.",
+    "p": "Pause the simulation.",
+    "c": "Resume a paused simulation.",
+    "focusHint": "Shortcuts work when the page is focused.",
+    "eShort": "I/O to tail",
+    "wShort": "error",
+    "pShort": "pause",
+    "cShort": "resume"
+  },
+  "finished": {
+    "error": "ERROR"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The requested path does not exist in this application.",
+    "back": "Go home"
+  }
+}

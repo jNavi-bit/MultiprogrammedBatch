@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Multiprogrammierte Stapelverarbeitung",
+    "description": "Simulator für Stapelverarbeitung mit Multiprogrammierung und Unterbrechungen."
+  },
+  "nav": {
+    "brand": "BS · Stapel",
+    "headerTitle": "Stapel mit Multiprogrammierung",
+    "tagline": "Stapel-Simulator mit Multiprogrammierung, Warteschlangen und Tastenkürzeln (E, W, P, C).",
+    "clockHint": "Erhöht sich pro Tick, solange die Simulation läuft.",
+    "sectionControls": "Steuerung",
+    "sectionControlsHint": "Pause, Fortsetzen oder Lauf zurücksetzen.",
+    "sectionTiming": "Tick-Intervall",
+    "sectionRun": "Neuer Lauf",
+    "runMenuHint": "Anzahl der Jobs (Stapel bis 4) wählen und starten.",
+    "stepDecrease": "Wert verringern",
+    "stepIncrease": "Wert erhöhen"
+  },
+  "theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "locale": {
+    "label": "Sprache",
+    "name_es": "Español",
+    "name_en": "English",
+    "name_de": "Deutsch"
+  },
+  "setup": {
+    "title": "Startkonfiguration",
+    "description": "Geben Sie die Anzahl der Jobs an. Es werden Stapel mit bis zu 4 Prozessen gebildet. ID, geschätzte Laufzeit und Operation werden automatisch erzeugt.",
+    "jobsLabel": "Anzahl der Jobs",
+    "start": "Simulation starten",
+    "hint": "Empfohlen: 4–40 Jobs, um mehrere Stapel zu sehen.",
+    "batchChip": "Bis zu 4 pro Stapel",
+    "batchesPreview": "Stapel"
+  },
+  "dashboard": {
+    "batchProgress": "Stapelfortschritt",
+    "tickHint": "Kleinere Tick-Werte laufen schneller. Du kannst das Intervall auch direkt in Millisekunden eingeben.",
+    "clockHint": "Erhöht sich bei jedem Tick, solange die Simulation läuft.",
+    "tooltipPause": "Timer und CPU-Ticks pausieren (Taste P).",
+    "tooltipResume": "Simulation fortsetzen (Taste C).",
+    "tooltipReset": "Zurück zum Konfigurationsbildschirm.",
+    "pendingBatches": "Ausstehende Stapel",
+    "waitingTitle": "Wartende Prozesse (aktueller Stapel)",
+    "runningTitle": "Laufender Prozess",
+    "finishedTitle": "Beendete Jobs",
+    "globalClock": "Globale Uhr",
+    "batchLabel": "Aktiver Stapel",
+    "emptyRunning": "Kein Prozess auf der CPU",
+    "tickLabel": "Tick-Intervall (ms)",
+    "reset": "Zurücksetzen",
+    "resume": "Fortsetzen",
+    "pause": "Pause",
+    "statusPaused": "Simulation pausiert",
+    "statusRunning": "Läuft",
+    "statusCompleted": "Simulation beendet",
+    "back": "Zurück zur Konfiguration",
+    "completedTitle": "Alle Stapel abgeschlossen",
+    "completedBody": "Du kannst zur Konfiguration zurückkehren, um eine neue Simulation zu starten."
+  },
+  "columns": {
+    "batchesAndQueue": "Stapel & Bereitschaftswarteschlange",
+    "running": "Prozess auf der CPU",
+    "finished": "Beendet",
+    "batchDone": "Stapel {n} · abgeschlossen",
+    "batchPending": "Stapel {n} · ausstehend",
+    "batchActive": "Stapel {n} · aktiv (Warteschlange)",
+    "queueEmpty": "Warteschlange leer: CPU bedient den ersten Job des Stapels oder die Schlange ist leer.",
+    "queueCpuOnly": "Keine weiteren in der Schlange: der einzige bereite Job dieses Stapels steht in der CPU-Spalte."
+  },
+  "empty": {
+    "beforeStart": "Oben: Play-Menü → Job-Anzahl → Start. Stapel und Warteschlange erscheinen hier.",
+    "cpuIdle": "Wenn ein Prozess die CPU hat, erscheint hier seine Karte mit Fortschrittsbalken.",
+    "noFinished": "Beendete Jobs (OK oder Fehler) erscheinen hier mit Ergebnis.",
+    "noBatches": "Noch keine Stapel erzeugt."
+  },
+  "process": {
+    "batch": "Stapel",
+    "id": "ID",
+    "operation": "Operation",
+    "operationAndResult": "Operation und Ergebnis",
+    "kind": "Typ",
+    "tme": "TME",
+    "elapsed": "Zeit",
+    "remaining": "Rest",
+    "cpuProgress": "CPU-Fortschritt",
+    "resultPending": "?",
+    "statusPendingBatch": "Stapel ausstehend",
+    "statusQueued": "Warteschlange",
+    "statusRunning": "Auf CPU",
+    "statusFinished": "Fertig",
+    "statusError": "Fehler"
+  },
+  "table": {
+    "id": "ID",
+    "tme": "TME",
+    "elapsed": "Verstrichene Zeit",
+    "remaining": "Verbleibend",
+    "operation": "Operation",
+    "result": "Ergebnis"
+  },
+  "keys": {
+    "title": "Tastenkürzel",
+    "e": "E/A-Unterbrechung: laufender Prozess ans Ende der Stapelwarteschlange.",
+    "w": "Fehler: beendet den aktuellen Prozess mit ERROR im Ergebnis.",
+    "p": "Simulation pausieren.",
+    "c": "Pausierte Simulation fortsetzen.",
+    "focusHint": "Kürzel funktionieren, wenn die Seite fokussiert ist.",
+    "eShort": "E/A ans Ende",
+    "wShort": "Fehler",
+    "pShort": "Pause",
+    "cShort": "weiter"
+  },
+  "finished": {
+    "error": "FEHLER"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Der angeforderte Pfad existiert in dieser Anwendung nicht.",
+    "back": "Zur Startseite"
+  }
+}

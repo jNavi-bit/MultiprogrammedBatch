@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# pnpm local store (if ever configured; default is global store)
+.pnpm-store/
+
 # dependencies
 /node_modules
 /.pnp
