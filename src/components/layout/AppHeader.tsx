@@ -48,7 +48,7 @@ function localeLabel(loc: string, get: (key: string) => string) {
 }
 
 function BarDivider() {
-  return <Separator orientation="vertical" className="mx-0.5 h-9 shrink-0 self-center bg-border/80 md:h-10" decorative />;
+  return <Separator orientation="vertical" className="mx-0.5 h-9 shrink-0 self-center bg-border/80 sm:h-10" decorative />;
 }
 
 export function AppHeader() {
@@ -97,15 +97,17 @@ export function AppHeader() {
     );
 
   const centerScroll = cn(
-    "flex max-w-[100vw] min-w-0 flex-nowrap items-center justify-center gap-2 md:gap-2.5",
+    "flex w-full min-w-0 max-w-full flex-nowrap items-center gap-1.5 sm:gap-2 md:gap-2.5",
+    "justify-start sm:justify-center",
     "overflow-x-auto overflow-y-hidden overscroll-x-contain py-0.5 [-webkit-overflow-scrolling:touch]",
     "scrollbar-thin scrollbar-track-transparent scrollbar-thumb-border/60",
+    "scroll-pl-1 scroll-pr-1 sm:scroll-p-0",
   );
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 shadow-sm backdrop-blur-md supports-backdrop-filter:bg-background/70">
       <div className="mx-auto grid min-h-13 w-full max-w-[min(100%,1680px)] min-w-0 grid-cols-1 items-center gap-y-2 px-3 py-3 sm:min-h-15 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:gap-y-0 md:px-5 md:py-3.5">
-        <div className="min-w-0 justify-self-center sm:justify-self-start sm:border-r sm:border-border/60 sm:pr-4">
+        <div className="min-w-0 w-full max-w-full justify-self-center sm:w-auto sm:max-w-none sm:justify-self-start sm:border-r sm:border-border/60 sm:pr-4">
           <Link
             href="/"
             className="flex max-w-full items-center gap-3 rounded-lg text-foreground ring-offset-background transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -122,13 +124,15 @@ export function AppHeader() {
           </Link>
         </div>
 
-        <div className="min-w-0 justify-self-center">
+        <div className="min-w-0 w-full max-w-full justify-self-stretch sm:w-auto sm:max-w-none sm:justify-self-center">
           <div className={centerScroll}>
-            <div className="flex shrink-0 items-center gap-2.5">
-              <div className="flex flex-col justify-center leading-none">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">{td("globalClock")}</span>
+            <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
+              <div className="flex shrink-0 flex-col justify-center leading-none">
+                <span className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                  {td("globalClock")}
+                </span>
                 <span
-                  className="mt-1 font-mono text-lg font-semibold tabular-nums tracking-tight text-foreground md:text-xl"
+                  className="mt-1 font-mono text-base font-semibold tabular-nums tracking-tight text-foreground sm:text-lg md:text-xl"
                   aria-live="polite"
                 >
                   <AnimatedInteger value={globalClock} emphasis />
@@ -137,7 +141,7 @@ export function AppHeader() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <span
-                    className="flex h-9 w-9 shrink-0 cursor-default items-center justify-center rounded-full border border-border/80 bg-muted/40 text-muted-foreground ring-1 ring-inset ring-border/30 md:h-10 md:w-10"
+                    className="flex h-9 w-9 shrink-0 cursor-default items-center justify-center rounded-full border border-border/80 bg-muted/40 text-muted-foreground ring-1 ring-inset ring-border/30 sm:h-10 sm:w-10"
                     aria-label={statusTooltip}
                   >
                     {statusIcon}
@@ -157,7 +161,7 @@ export function AppHeader() {
               </Label>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border/80 bg-muted/25 text-muted-foreground">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border/80 bg-muted/25 text-muted-foreground sm:h-10 sm:w-10">
                     <Timer className="h-4 w-4" aria-hidden />
                   </span>
                 </TooltipTrigger>
@@ -171,7 +175,7 @@ export function AppHeader() {
                 min={200}
                 max={3000}
                 step={50}
-                className="h-10 w-20 shrink-0 px-2 text-center text-sm tabular-nums md:w-24"
+                className="h-9 w-18 shrink-0 px-1.5 text-center text-sm tabular-nums sm:h-10 sm:w-20 sm:px-2 md:w-24"
                 value={tickMs}
                 onChange={(e) => setTickMs(e.target.valueAsNumber)}
                 aria-label={td("tickLabel")}
@@ -180,14 +184,14 @@ export function AppHeader() {
 
             <BarDivider />
 
-            <div className="flex shrink-0 items-center gap-0.5">
+            <div className="flex shrink-0 items-center gap-px sm:gap-0.5">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <span>
                     <Button
                       variant="secondary"
                       size="icon"
-                      className="h-10 w-10 shrink-0"
+                      className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
                       onClick={pause}
                       disabled={phase !== "running" || paused}
                       aria-label={td("pause")}
@@ -204,7 +208,7 @@ export function AppHeader() {
                     <Button
                       variant="secondary"
                       size="icon"
-                      className="h-10 w-10 shrink-0"
+                      className="h-9 w-9 shrink-0 sm:h-10 sm:w-10"
                       onClick={resume}
                       disabled={phase === "completed" || !paused}
                       aria-label={td("resume")}
@@ -217,7 +221,7 @@ export function AppHeader() {
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" className="h-10 w-10 shrink-0" onClick={reset} aria-label={td("back")}>
+                  <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" onClick={reset} aria-label={td("back")}>
                     <RotateCcw className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
@@ -229,10 +233,10 @@ export function AppHeader() {
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="h-10 shrink-0 gap-1.5 px-3" aria-label={ts("start")} type="button">
+                <Button variant="outline" size="sm" className="h-9 shrink-0 gap-1 px-2 sm:h-10 sm:gap-1.5 sm:px-3" aria-label={ts("start")} type="button">
                   <Play className="h-3.5 w-3.5 shrink-0" />
-                  <span className="max-w-32 truncate sm:max-w-40 md:max-w-none">{ts("start")}</span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-60" />
+                  <span className="max-sm:sr-only max-w-32 truncate sm:max-w-40 md:max-w-none">{ts("start")}</span>
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-60 max-sm:hidden" aria-hidden />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-56 p-3">
@@ -256,7 +260,7 @@ export function AppHeader() {
 
             <BarDivider />
 
-            <div className="flex shrink-0 items-center gap-1.5">
+            <div className="flex shrink-0 items-center gap-1 sm:gap-1.5">
               <span className="hidden text-[10px] font-semibold uppercase tracking-wide text-muted-foreground md:inline">{tk("title")}</span>
               {(["e", "w", "p", "c"] as const).map((k) => (
                 <Tooltip key={k}>
@@ -274,10 +278,10 @@ export function AppHeader() {
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center justify-center gap-2 border-t border-border/50 pt-2 sm:justify-self-end sm:border-l sm:border-t-0 sm:border-border/60 sm:pl-4 sm:pt-0">
+        <div className="flex w-full min-w-0 shrink-0 flex-wrap items-center justify-center gap-2 border-t border-border/50 pt-2 sm:w-auto sm:flex-nowrap sm:justify-self-end sm:border-l sm:border-t-0 sm:border-border/60 sm:pl-4 sm:pt-0">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="h-10 gap-1.5 px-2.5 sm:px-3" aria-label={tl("label")}>
+              <Button variant="outline" size="sm" className="h-9 gap-1.5 px-2 sm:h-10 sm:px-3" aria-label={tl("label")}>
                 <Globe className="h-3.5 w-3.5 shrink-0" />
                 <span className="max-w-28 truncate text-xs font-medium">{localeLabel(locale, tl)}</span>
                 <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-50" />
@@ -295,7 +299,7 @@ export function AppHeader() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon" className="h-10 w-10 shrink-0" aria-label={tt("system")} suppressHydrationWarning>
+              <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" aria-label={tt("system")} suppressHydrationWarning>
                 <Palette className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
